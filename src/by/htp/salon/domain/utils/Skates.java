@@ -23,7 +23,7 @@ public class Skates extends Units {
 
 	@Override
 	public String toString() {
-		return "Skates [size=" + size + ", weight=" + weight + ", title=" + title + ", cost=" + cost + ", id=" + id
+		return "Skates=" + size + "=" + weight + "=" + title + "=" + cost + "=" + id
 				+ "]";
 	}
 	

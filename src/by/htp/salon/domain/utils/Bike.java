@@ -23,8 +23,7 @@ public class Bike extends Units{
 	}
 	@Override
 	public String toString() {
-		return "Bike [frameType=" + frameType + ", weight=" + weight + ", title=" + title + ", cost=" + cost + ", id="
-				+ id + "]";
+		return "Bike=" + frameType + "=" + weight + "=" + title + "=" + cost + "="+ id;
 	}
 	
 	

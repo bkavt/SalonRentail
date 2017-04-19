@@ -23,8 +23,7 @@ public class Rollers extends Units {
 
 	@Override
 	public String toString() {
-		return "Rollers [size=" + size + ", weight=" + weight + ", title=" + title + ", cost=" + cost + ", id=" + id
-				+ "]";
+		return "Rollers=" + size + "=" + weight + "=" + title + "=" + cost + "=" + id;
 	}
 
 
