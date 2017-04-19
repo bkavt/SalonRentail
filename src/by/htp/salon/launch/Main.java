@@ -34,7 +34,7 @@ public class Main {
 		eq5.setTitle("Skates");
 		Equipment eq6=new Bike();
 		eq6.setTitle("Bike");
-
+//eq1.
 		Equipment ac1=new Helmet();
 		Equipment ac2=new KneePads();
 		Equipment ac3=new KneePads();

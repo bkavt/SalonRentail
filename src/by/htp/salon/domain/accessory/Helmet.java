@@ -14,7 +14,7 @@ public class Helmet extends Accessory {
 
 	@Override
 	public String toString() {
-		return "Helmet [size=" + size + ", title=" + title + ", cost=" + cost + ", id=" + id + "]";
+		return "Helmet=" + size + "=" + title + "=" + cost + "=" + id;
 	}
 
 	

@@ -72,6 +72,9 @@ public class Manager {
 	}
 	
 	public void printReportByRent(){
-		myIO.WriteList(rentEquip);
+		myIO.WriteList(freeEquip);
+		myIO.ReadEquip();
 	}
+	
+	
 }

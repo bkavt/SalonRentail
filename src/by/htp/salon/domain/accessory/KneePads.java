@@ -14,7 +14,7 @@ public class KneePads extends Accessory {
 
 	@Override
 	public String toString() {
-		return "KneePads [size=" + size + ", title=" + title + ", cost=" + cost + ", id=" + id + "]";
+		return "KneePads=" + size + "=" + title + "=" + cost + "=" + id;
 	}
 
 	

@@ -16,9 +16,10 @@ public class ElbowPads extends Accessory{
 
 	@Override
 	public String toString() {
-		return "ElbowPads [size=" + size + ", title=" + title + ", cost=" + cost + ", id=" + id + "]";
+			return "ElbowPads=" + size + "=" + title + "=" + cost + "=" + id;
 	}
 
 	
 	
 }
+ 
