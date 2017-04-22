@@ -39,12 +39,17 @@ public class Main {
 		eq6.setTitle("Bike");
 //eq1.
 		Equipment ac1=new Helmet();
+		ac1.setTitle("Helmet");
 		Equipment ac2=new KneePads();
+		ac2.setTitle("KneePads");
 		Equipment ac3=new KneePads();
+		ac3.setTitle("KneePads");
 		Equipment ac4=new Helmet();
 		ac4.setTitle("Helmet");
 		Equipment ac5=new ElbowPads();
+		ac5.setTitle("ElbowPads");
 		Equipment ac6=new ElbowPads();
+		ac6.setTitle("ElbowPads");
 		
 		Client p1 = new Client("Vasya","Ivanov","Pasport");
 		Client p2 = new Client("Pert","Sidorov","Pasport");

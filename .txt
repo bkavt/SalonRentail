@@ -1,0 +1,91 @@
+public static void importData(Manager man) throws ParserConfigurationException	{	
+		DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+		DocumentBuilder docBuilder=factory.newDocumentBuilder();
+		Document document= docBuilder.newDocument();
+		
+		Element rentStation = document.createElement("rent-station");
+		document.appendChild(rentStation);
+		Element clients = document.createElement("clients");
+		rentStation.appendChild(clients);
+			
+			
+					List<Client> clientList=new ArrayList(man.getClientList());
+					
+					for(Client cl:clientList){
+						Element client = document.createElement("client");
+						clients.appendChild(client);
+							Element name = document.createElement("name");
+								name.appendChild(document.createTextNode(cl.getName()));
+							Element soname = document.createElement("soname");
+								soname.appendChild(document.createTextNode(cl.getSoname()));
+							Element doc = document.createElement("document");
+								doc.appendChild(document.createTextNode(cl.getDocument()));
+							client.appendChild(name);
+							client.appendChild(soname);
+							client.appendChild(doc);
+								
+								Attr idClient=document.createAttribute("id");
+								idClient.setValue(String.valueOf(cl.getId()));
+								client.setAttributeNode(idClient);
+						
+					}
+					int i=0;
+					for (Equipment eq: man.getRentEquip().getEquip()){
+					 if(eq!=null){
+						Element equipments = document.createElement("equipments");
+						rentStation.appendChild(equipments);
+
+
+						
+						
+						
+						
+						Element title = document.createElement("title");
+							equipments.appendChild(title);
+							String str=eq.getTitle();
+								title.appendChild(document.createTextNode(str));
+							Attr idEq=document.createAttribute("id");
+							idEq.setValue(String.valueOf(++i));
+							equipments.setAttributeNode(idEq);
+							System.out.println(str);
+							Element accessory = document.createElement("accessory");
+							equipments.appendChild(accessory);
+					 }
+							
+						}
+						
+						
+			
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+			
+			TransformerFactory factoryTr= TransformerFactory.newInstance();
+			try {
+				Transformer tranformer=factoryTr.newTransformer();
+				DOMSource domSource = new DOMSource(document);
+				StreamResult srteamFile= new StreamResult(new File("salon_rentail.xml"));
+				tranformer.transform(domSource, srteamFile);
+							
+			} catch (TransformerException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+						
+						
+						
+									
+						
+	}
+}
