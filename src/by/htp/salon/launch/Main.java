@@ -7,6 +7,8 @@ import by.htp.salon.domain.RentStation;
 
 import java.util.Arrays;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import by.htp.salon.domain.Client;
 import by.htp.salon.domain.accessory.ElbowPads;
 import by.htp.salon.domain.accessory.Helmet;
@@ -14,12 +16,13 @@ import by.htp.salon.domain.accessory.KneePads;
 import by.htp.salon.domain.utils.Bike;
 import by.htp.salon.domain.utils.Rollers;
 import by.htp.salon.domain.utils.Skates;
+import by.htp.salon.logics.DomParser;
 import by.htp.salon.logics.MyIO;
 
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParserConfigurationException {
 		
 		
 		Equipment eq1=new Bike();
@@ -93,10 +96,10 @@ public class Main {
 		manager.showRentEquip();
 		System.out.println("Rent---------");
 		
-		manager.printReportByRent();
-		
+		//manager.printReportByRent();
 	
-	
+		DomParser.importData(manager);
+		System.out.println(manager.getClientList()); 
 	}
 
 }

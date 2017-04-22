@@ -1,5 +1,7 @@
 package by.htp.salon.domain;
 
+import java.util.HashSet;
+
 import by.htp.salon.logics.MyIO;
 import by.htp.salon.logics.RentUnit;
 
@@ -8,12 +10,14 @@ public class Manager {
 	private OrderList order=new OrderList();
 	private RentUnit rentEquip=new RentUnit();
 	private MyIO myIO=new MyIO();
+	private HashSet<Client>  ClientList=new HashSet();
 	
 	public void setList(Equipment[] equip){
 		freeEquip.setEquip(equip);
 	}
 	
 	public void newOrder(Equipment equip,Client client){
+		ClientList.add(client);
 		if (equip!=null){
 			if (order.culcRentUnit(client)<3){
 			order.newOrder(equip, client);
@@ -70,11 +74,46 @@ public class Manager {
 			return null;	
 		}
 	}
+
+	public HashSet<Client> getClientList() {
+		return ClientList;
+	}
+
+	public void setClientList(HashSet<Client> clientList) {
+		ClientList = clientList;
+	}
+
+	public RentUnit getFreeEquip() {
+		return freeEquip;
+	}
+
+	public void setFreeEquip(RentUnit freeEquip) {
+		this.freeEquip = freeEquip;
+	}
+
+	public OrderList getOrder() {
+		return order;
+	}
+
+	public void setOrder(OrderList order) {
+		this.order = order;
+	}
+
+	public RentUnit getRentEquip() {
+		return rentEquip;
+	}
+
+	public void setRentEquip(RentUnit rentEquip) {
+		this.rentEquip = rentEquip;
+	}
 	
+	
+	
+/*	
 	public void printReportByRent(){
 		myIO.WriteList(freeEquip);
 		myIO.ReadEquip();
 	}
-	
+*/	
 	
 }

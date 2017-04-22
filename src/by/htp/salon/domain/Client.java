@@ -11,7 +11,7 @@ public class Client {
 	{
 		num++;
 		id=num;
-		document="Pasport N:"+num;
+		//document="Pasport N:"+(1000000+num);
 		
 	}
 	
@@ -45,6 +45,14 @@ public class Client {
 	public void setDocument(String document) {
 		this.document = document;
 	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
